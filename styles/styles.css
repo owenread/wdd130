@@ -2,6 +2,10 @@ main {
     max-width: 840px;
 }
 
+h1 {
+    color: steelblue;
+}
+
 nav {
     background-color: steelblue;
     padding: 10px;
@@ -10,12 +14,18 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
+    display: block;
+    padding: 5px 10px;
     margin-right: 1rem;
+
 }
 
 main img {
     width: 150px;
     height: auto;
+    border: 2px solid #333;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 aside {
