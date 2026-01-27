@@ -133,7 +133,7 @@ footer {
     text-align: center;
     background-color: var(--primary-color);
     color: var(--accent2-color);
-    border-top: 4px solid var(--secondary-color);
+    border-top: 8px solid var(--secondary-color);
 }
 
 .socialmedia {
