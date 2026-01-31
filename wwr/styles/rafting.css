@@ -1,5 +1,6 @@
 /* Author: Owen Read | About page styling */
 
+/* ===== RESET ===== */
 *,
 *::before,
 *::after {
@@ -8,6 +9,7 @@
     box-sizing: border-box;
 }
 
+/* ===== VARIABLES ===== */
 :root {
     --primary-color: #264653;
     /* dark slate blue */
@@ -21,6 +23,7 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+/* ===== BASE ===== */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
@@ -35,24 +38,32 @@ footer {
     margin: 0 auto;
 }
 
+/* ===== HEADER (GRID) ===== */
 header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 16px;
     background-color: var(--primary-color);
     color: var(--accent2-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
 }
 
 header img {
     width: 150px;
     height: auto;
+    margin-left: 125px;
 }
 
+nav {
+    justify-self: end;
+}
+
+/* ===== NAV (FLEX) ===== */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 16px;
+    gap: 30px;
+    margin-right: 75px;
 }
 
 nav ul li a {
@@ -66,13 +77,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-section,
-article,
-p {
-    margin: 16px 0;
-    padding: 8px;
-}
-
+/* ===== TYPOGRAPHY ===== */
 h1 {
     font-family: var(--heading-font);
     color: var(--accent2-color);
@@ -81,8 +86,18 @@ h1 {
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 16px;
 }
 
+section,
+article,
+p {
+    margin: 16px 0;
+    padding: 8px;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
     position: relative;
     margin-bottom: 32px;
@@ -127,23 +142,46 @@ h2 {
     color: var(--accent1-color);
 }
 
-footer {
-    margin-top: 32px;
-    padding: 16px 0;
+/* ===== HISTORY SECTION ===== */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.history-content img {
+    width: 100%;
+}
+
+/* ===== ADVENTURES SECTION ===== */
+.adventure-gallery {
+    display: flex;
+    gap: 16px;
+}
+
+.adventure-gallery figure {
     text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
     background-color: var(--primary-color);
     color: var(--accent2-color);
     border-top: 8px solid var(--secondary-color);
 }
 
 .socialmedia {
-    margin-top: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-    margin: 0 8px;
-    display: inline-block;
+    display: flex;
+    gap: 8px;
 }
 
 .socialmedia a img {
@@ -151,6 +189,7 @@ footer {
     height: 60px;
 }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
 
     header,
@@ -168,5 +207,13 @@ footer {
 
     .hero article {
         text-align: center;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery {
+        flex-direction: column;
     }
 }
