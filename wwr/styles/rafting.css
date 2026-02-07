@@ -1,4 +1,4 @@
-/* Author: Owen Read | Rafting Site Styling | Contact Page Audit Safe */
+/* Author: Owen Read | Rafting Site Styling | Updated for Contact Page */
 
 /* ===== RESET ===== */
 *,
@@ -92,6 +92,76 @@ article {
     padding: 8px;
 }
 
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(38, 70, 83, 0.85);
+    font-size: 2rem;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.hero article img {
+    float: right;
+    width: 300px;
+    margin-left: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero article p {
+    color: var(--accent1-color);
+}
+
+/* ===== HISTORY ===== */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.history-content img {
+    width: 100%;
+}
+
+/* ===== ADVENTURE ===== */
+.adventure-gallery {
+    display: flex;
+    gap: 16px;
+}
+
+.adventure-gallery figure {
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+}
+
 /* ===== FOOTER ===== */
 footer {
     display: flex;
@@ -106,6 +176,10 @@ footer {
 .socialmedia {
     display: flex;
     gap: 8px;
+}
+
+.socialmedia a {
+    text-decoration: none;
 }
 
 .socialmedia a img {
@@ -143,7 +217,7 @@ footer {
     border: none;
 }
 
-/* ===== CONTACT FORM ===== */
+/* Contact Form */
 .contact-page .contact-form {
     flex: 1;
     min-width: 300px;
@@ -152,46 +226,36 @@ footer {
     flex-direction: column;
 }
 
-/* Text inputs ONLY */
-.contact-page .contact-form input:not([type="radio"]):not([type="checkbox"]),
+/* Radio + Checkbox Alignment (Audit-safe) */
+.contact-page .contact-form label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.contact-page .contact-form input,
 .contact-page .contact-form textarea {
     width: 100%;
     padding: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-/* ✅ RADIO & CHECKBOX FIX (FORCED LEFT ALIGNMENT) */
-.contact-page .contact-form label {
-    display: flex;
-    /* force horizontal layout */
-    flex-direction: row;
-    /* explicit row */
-    align-items: center;
-    /* vertical alignment */
-    gap: 10px;
-    /* space between input and text */
-    margin-bottom: 12px;
-    cursor: pointer;
-    white-space: nowrap;
-    /* prevent wrapping */
-}
-
-/* Prevent inputs from behaving like blocks */
 .contact-page .contact-form input[type="radio"],
 .contact-page .contact-form input[type="checkbox"] {
-    flex: 0 0 auto;
-    /* never stretch */
     width: 16px;
     height: 16px;
     margin: 0;
 }
 
-/* Button – WCAG AA compliant */
+/* Button – WCAG AA Contrast Fix */
 .contact-page .contact-form button {
     width: 100%;
     padding: 10px;
     background-color: var(--secondary-color);
     color: var(--accent1-color);
+    /* contrast compliant */
     border: none;
     cursor: pointer;
 }
@@ -200,15 +264,13 @@ footer {
     opacity: 0.85;
 }
 
-/* ===== EMPLOYEES ===== */
+/* Employees */
 .contact-page .employees-section .employees {
     display: flex;
     justify-content: center;
     gap: 60px;
     padding: 16px;
     background-color: var(--primary-color);
-    /* FIX: WCAG AA contrast */
-    color: var(--accent2-color);
 }
 
 .contact-page .employees-section figure {
@@ -233,6 +295,25 @@ footer {
     main,
     footer {
         width: 95%;
+    }
+
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 0 auto 12px;
+        width: 150px;
+    }
+
+    .hero article {
+        text-align: center;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery {
+        flex-direction: column;
     }
 
     .contact-page .employees-section .employees {
