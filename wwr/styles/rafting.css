@@ -1,5 +1,3 @@
-/* Author: Owen Read | Rafting Site Styling | Updated for Contact Page */
-
 *,
 *::before,
 *::after {
@@ -10,13 +8,9 @@
 
 :root {
     --primary-color: #264653;
-    /* dark slate blue */
     --secondary-color: #2a9d8f;
-    /* teal accent */
     --accent1-color: #1b1b1b;
-    /* near-black text */
     --accent2-color: #ffffff;
-    /* white text */
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -28,16 +22,13 @@ body {
     line-height: 1.6;
 }
 
-/* Page Wrapper */
 header,
 main,
 footer {
     max-width: 840px;
-    width: 100%;
     margin: 0 auto;
 }
 
-/* Header */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -49,7 +40,6 @@ header {
 
 header img {
     width: 150px;
-    height: auto;
 }
 
 nav {
@@ -57,26 +47,24 @@ nav {
 }
 
 nav ul {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 30px;
 }
 
-nav ul li a {
-    text-decoration: none;
+nav a {
     color: var(--accent2-color);
+    text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
 }
 
-/* Headings */
 h1 {
     font-family: var(--heading-font);
-    color: var(--accent2-color);
 }
 
 h2 {
@@ -86,86 +74,6 @@ h2 {
     margin-bottom: 16px;
 }
 
-/* Sections & Articles */
-section,
-article {
-    margin: 16px 0;
-    padding: 8px;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    margin-bottom: 32px;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    background-color: rgba(38, 70, 83, 0.85);
-    font-size: 2rem;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 30px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 16px;
-    border-radius: 8px;
-    text-align: left;
-}
-
-.hero article img {
-    float: right;
-    width: 300px;
-    margin-left: 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.hero article p {
-    margin: 0;
-    color: var(--accent1-color);
-}
-
-/* History Section */
-.history-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-    align-items: center;
-}
-
-.history-content img {
-    width: 100%;
-}
-
-/* Adventure Gallery */
-.adventure-gallery {
-    display: flex;
-    gap: 16px;
-}
-
-.adventure-gallery figure {
-    text-align: center;
-}
-
-.adventure-gallery img {
-    width: 100%;
-}
-
-/* Footer */
 footer {
     display: flex;
     justify-content: space-between;
@@ -173,24 +81,76 @@ footer {
     padding: 16px;
     background-color: var(--primary-color);
     color: var(--accent2-color);
-    border-top: 8px solid var(--secondary-color);
 }
 
-.socialmedia {
-    display: flex;
-    gap: 8px;
-}
-
-.socialmedia a img {
+.socialmedia img {
     width: 60px;
     height: 60px;
 }
 
-.socialmedia a {
-    text-decoration: none;
+.contact-page .company-info h1,
+.contact-page .company-info p {
+    color: var(--primary-color);
+    text-align: center;
 }
 
-/* Media Queries */
+.contact-page .map-form-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-page iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border: none;
+}
+
+.contact-page .contact-form {
+    max-width: 400px;
+}
+
+.contact-page .contact-form label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.contact-page .contact-form input,
+.contact-page .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.contact-page .contact-form button {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-page .employees {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 16px;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+.contact-page .employees figure {
+    max-width: 150px;
+    text-align: center;
+}
+
+.contact-page .employees img {
+    width: 100%;
+    border-radius: 8px;
+}
+
 @media (max-width: 900px) {
 
     header,
@@ -199,154 +159,7 @@ footer {
         width: 95%;
     }
 
-    .hero article img {
-        float: none;
-        display: block;
-        margin: 0 auto 12px auto;
-        width: 150px;
-    }
-
-    .hero article {
-        text-align: center;
-    }
-
-    .history-content {
-        grid-template-columns: 1fr;
-    }
-
-    .adventure-gallery {
-        flex-direction: column;
-    }
-}
-
-/* Company Info */
-.contact-page .company-info h1 {
-    color: var(--primary-color);
-    text-align: center;
-}
-
-.contact-page .company-info p {
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 8px;
-    font-size: 1rem;
-}
-
-/* Map + Form Layout */
-/* Map + Form Wrapper */
-.contact-page .map-form-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    /* smaller gap to fit both */
-    flex-wrap: wrap;
-    /* allows wrapping only on very small screens */
-    align-items: flex-start;
-}
-
-/* Google Map */
-.contact-page .map-form-wrapper iframe {
-    width: 50%;
-    /* take half of the container */
-    max-width: 400px;
-    /* keep it from getting too big */
-    height: 300px;
-    border: none;
-}
-
-/* Contact Form */
-.contact-page .contact-form {
-    flex: 1;
-    /* take remaining space */
-    min-width: 300px;
-    /* prevent form from getting too small */
-    max-width: 400px;
-    /* keep form readable */
-    display: flex;
-    flex-direction: column;
-}
-
-/* Radio + Checkbox Alignment */
-.contact-page .contact-form label {
-    display: flex;
-    /* input + text in one line */
-    align-items: center;
-    /* vertical center */
-    gap: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-/* Radio & Checkbox Alignment Fix */
-/* Contact Form - Radio & Checkbox Fix */
-/* Contact Form Radios & Checkbox Alignment */
-.contact-page .contact-form label {
-    display: inline-flex;
-    /* keep input + text on the same line */
-    align-items: center;
-    /* vertical center */
-    gap: 8px;
-    /* space between input and text */
-    margin-bottom: 12px;
-    /* spacing between options */
-    cursor: pointer;
-}
-
-.contact-page .contact-form input[type="radio"],
-.contact-page .contact-form input[type="checkbox"] {
-    margin: 0;
-    /* remove browser default spacing */
-    padding: 0;
-    width: 16px;
-    /* consistent size */
-    height: 16px;
-    vertical-align: middle;
-    /* aligns input with text */
-}
-
-.contact-page .contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--secondary-color);
-    color: var(--accent2-color);
-    border: none;
-    cursor: pointer;
-}
-
-.contact-page .contact-form button:hover {
-    opacity: 0.85;
-}
-
-/* Employees Section */
-.contact-page .employees-section .employees {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: nowrap;
-    padding: 16px;
-    background-color: var(--primary-color);
-}
-
-.contact-page .employees-section figure {
-    text-align: center;
-    max-width: 150px;
-}
-
-.contact-page .employees-section figure img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Explicit color for contrast compliance */
-.contact-page .employees-section figcaption {
-    color: var(--accent2-color);
-    font-size: 0.9rem;
-}
-
-/* Responsive Safety */
-@media (max-width: 900px) {
-    .contact-page .employees-section .employees {
+    .contact-page .employees {
         flex-wrap: wrap;
         gap: 24px;
     }
