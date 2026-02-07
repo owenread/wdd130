@@ -256,7 +256,7 @@ footer {
 }
 
 .contact-page .employees-section h2 {
-    color: var(--accent2-color);
+    color: var(--accent1-color);
 }
 
 .contact-page .employees-section .employees {
@@ -277,7 +277,7 @@ footer {
 }
 
 .contact-page .employees-section figcaption {
-    color: var(--accent2-color);
+    color: var(--accent1-color);
     font-size: 0.9rem;
 }
 
