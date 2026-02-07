@@ -1,6 +1,5 @@
 /* Author: Owen Read | Rafting Site Styling | Updated for Contact Page */
 
-/* ===== RESET ===== */
 *,
 *::before,
 *::after {
@@ -9,7 +8,6 @@
     box-sizing: border-box;
 }
 
-/* ===== VARIABLES ===== */
 :root {
     --primary-color: #264653;
     --secondary-color: #2a9d8f;
@@ -19,7 +17,6 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* ===== BASE ===== */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
@@ -27,7 +24,6 @@ body {
     line-height: 1.6;
 }
 
-/* ===== PAGE WRAPPER ===== */
 header,
 main,
 footer {
@@ -36,7 +32,6 @@ footer {
     margin: 0 auto;
 }
 
-/* ===== HEADER ===== */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -72,7 +67,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* ===== HEADINGS ===== */
 h1 {
     font-family: var(--heading-font);
     color: var(--accent2-color);
@@ -85,14 +79,12 @@ h2 {
     margin-bottom: 16px;
 }
 
-/* ===== SECTIONS ===== */
 section,
 article {
     margin: 16px 0;
     padding: 8px;
 }
 
-/* ===== HERO ===== */
 .hero {
     position: relative;
     margin-bottom: 32px;
@@ -136,7 +128,6 @@ article {
     color: var(--accent1-color);
 }
 
-/* ===== HISTORY ===== */
 .history-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -148,7 +139,6 @@ article {
     width: 100%;
 }
 
-/* ===== ADVENTURE ===== */
 .adventure-gallery {
     display: flex;
     gap: 16px;
@@ -162,7 +152,6 @@ article {
     width: 100%;
 }
 
-/* ===== FOOTER ===== */
 footer {
     display: flex;
     justify-content: space-between;
@@ -187,10 +176,6 @@ footer {
     height: 60px;
 }
 
-/* ================================================= */
-/* ================= CONTACT PAGE ================= */
-/* ================================================= */
-
 .contact-page .company-info h1,
 .contact-page .company-info p {
     color: var(--primary-color);
@@ -201,7 +186,6 @@ footer {
     margin-bottom: 8px;
 }
 
-/* Map + Form Layout */
 .contact-page .map-form-wrapper {
     display: flex;
     justify-content: center;
@@ -217,7 +201,6 @@ footer {
     border: none;
 }
 
-/* Contact Form */
 .contact-page .contact-form {
     flex: 1;
     min-width: 300px;
@@ -226,7 +209,6 @@ footer {
     flex-direction: column;
 }
 
-/* Radio + Checkbox Alignment (Audit-safe) */
 .contact-page .contact-form label {
     display: inline-flex;
     align-items: center;
@@ -249,7 +231,6 @@ footer {
     margin: 0;
 }
 
-/* Button – WCAG AA Contrast Fix */
 .contact-page .contact-form button {
     width: 100%;
     padding: 10px;
@@ -264,7 +245,6 @@ footer {
     opacity: 0.85;
 }
 
-/* Employees */
 .contact-page .employees-section .employees {
     display: flex;
     justify-content: center;
@@ -288,7 +268,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
 
     header,
