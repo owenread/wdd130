@@ -1,4 +1,4 @@
-/* Author: Owen Read | About page styling 30 Jan 2026*/
+/* Author: Owen Read | Rafting Site Styling | Updated for Contact Page */
 
 *,
 *::before,
@@ -28,13 +28,16 @@ body {
     line-height: 1.6;
 }
 
+/* Page Wrapper */
 header,
 main,
 footer {
-    width: 840px;
+    max-width: 840px;
+    width: 100%;
     margin: 0 auto;
 }
 
+/* Header */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -47,7 +50,6 @@ header {
 header img {
     width: 150px;
     height: auto;
-    margin-left: 125px;
 }
 
 nav {
@@ -58,7 +60,6 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin-right: 75px;
 }
 
 nav ul li a {
@@ -72,6 +73,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Headings */
 h1 {
     font-family: var(--heading-font);
     color: var(--accent2-color);
@@ -84,13 +86,14 @@ h2 {
     margin-bottom: 16px;
 }
 
+/* Sections & Articles */
 section,
-article,
-p {
+article {
     margin: 16px 0;
     padding: 8px;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
     margin-bottom: 32px;
@@ -120,6 +123,7 @@ p {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 16px;
     border-radius: 8px;
+    text-align: left;
 }
 
 .hero article img {
@@ -135,6 +139,7 @@ p {
     color: var(--accent1-color);
 }
 
+/* History Section */
 .history-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -146,6 +151,7 @@ p {
     width: 100%;
 }
 
+/* Adventure Gallery */
 .adventure-gallery {
     display: flex;
     gap: 16px;
@@ -159,6 +165,7 @@ p {
     width: 100%;
 }
 
+/* Footer */
 footer {
     display: flex;
     justify-content: space-between;
@@ -170,7 +177,6 @@ footer {
 }
 
 .socialmedia {
-
     display: flex;
     gap: 8px;
 }
@@ -184,6 +190,7 @@ footer {
     text-decoration: none;
 }
 
+/* Media Queries */
 @media (max-width: 900px) {
 
     header,
@@ -209,5 +216,138 @@ footer {
 
     .adventure-gallery {
         flex-direction: column;
+    }
+}
+
+/* Company Info */
+.contact-page .company-info h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.contact-page .company-info p {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Map + Form Layout */
+/* Map + Form Wrapper */
+.contact-page .map-form-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* smaller gap to fit both */
+    flex-wrap: wrap;
+    /* allows wrapping only on very small screens */
+    align-items: flex-start;
+}
+
+/* Google Map */
+.contact-page .map-form-wrapper iframe {
+    width: 50%;
+    /* take half of the container */
+    max-width: 400px;
+    /* keep it from getting too big */
+    height: 300px;
+    border: none;
+}
+
+/* Contact Form */
+.contact-page .contact-form {
+    flex: 1;
+    /* take remaining space */
+    min-width: 300px;
+    /* prevent form from getting too small */
+    max-width: 400px;
+    /* keep form readable */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Radio + Checkbox Alignment */
+.contact-page .contact-form label {
+    display: flex;
+    /* input + text in one line */
+    align-items: center;
+    /* vertical center */
+    gap: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+/* Radio & Checkbox Alignment Fix */
+/* Contact Form - Radio & Checkbox Fix */
+/* Contact Form Radios & Checkbox Alignment */
+.contact-page .contact-form label {
+    display: inline-flex;
+    /* keep input + text on the same line */
+    align-items: center;
+    /* vertical center */
+    gap: 8px;
+    /* space between input and text */
+    margin-bottom: 12px;
+    /* spacing between options */
+    cursor: pointer;
+}
+
+.contact-page .contact-form input[type="radio"],
+.contact-page .contact-form input[type="checkbox"] {
+    margin: 0;
+    /* remove browser default spacing */
+    padding: 0;
+    width: 16px;
+    /* consistent size */
+    height: 16px;
+    vertical-align: middle;
+    /* aligns input with text */
+}
+
+.contact-page .contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+    border: none;
+    cursor: pointer;
+}
+
+.contact-page .contact-form button:hover {
+    opacity: 0.85;
+}
+
+/* Employees Section */
+.contact-page .employees-section .employees {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: nowrap;
+    padding: 16px;
+    background-color: var(--primary-color);
+}
+
+.contact-page .employees-section figure {
+    text-align: center;
+    max-width: 150px;
+}
+
+.contact-page .employees-section figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Explicit color for contrast compliance */
+.contact-page .employees-section figcaption {
+    color: var(--accent2-color);
+    font-size: 0.9rem;
+}
+
+/* Responsive Safety */
+@media (max-width: 900px) {
+    .contact-page .employees-section .employees {
+        flex-wrap: wrap;
+        gap: 24px;
     }
 }
