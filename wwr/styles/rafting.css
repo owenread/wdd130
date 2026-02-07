@@ -1,3 +1,6 @@
+/* Author: Owen Read | Rafting Site Styling | Updated for Contact Page */
+
+/* ===== RESET ===== */
 *,
 *::before,
 *::after {
@@ -6,6 +9,7 @@
     box-sizing: border-box;
 }
 
+/* ===== VARIABLES ===== */
 :root {
     --primary-color: #264653;
     --secondary-color: #2a9d8f;
@@ -15,6 +19,7 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+/* ===== BASE ===== */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
@@ -22,13 +27,16 @@ body {
     line-height: 1.6;
 }
 
+/* ===== PAGE WRAPPER ===== */
 header,
 main,
 footer {
     max-width: 840px;
+    width: 100%;
     margin: 0 auto;
 }
 
+/* ===== HEADER ===== */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -40,6 +48,7 @@ header {
 
 header img {
     width: 150px;
+    height: auto;
 }
 
 nav {
@@ -47,24 +56,26 @@ nav {
 }
 
 nav ul {
-    display: flex;
     list-style: none;
+    display: flex;
     gap: 30px;
 }
 
-nav a {
-    color: var(--accent2-color);
+nav ul li a {
     text-decoration: none;
+    color: var(--accent2-color);
     font-weight: bold;
 }
 
-nav a:hover {
+nav ul li a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
 }
 
+/* ===== HEADINGS ===== */
 h1 {
     font-family: var(--heading-font);
+    color: var(--accent2-color);
 }
 
 h2 {
@@ -74,6 +85,84 @@ h2 {
     margin-bottom: 16px;
 }
 
+/* ===== SECTIONS ===== */
+section,
+article {
+    margin: 16px 0;
+    padding: 8px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(38, 70, 83, 0.85);
+    font-size: 2rem;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.hero article img {
+    float: right;
+    width: 300px;
+    margin-left: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero article p {
+    color: var(--accent1-color);
+}
+
+/* ===== HISTORY ===== */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.history-content img {
+    width: 100%;
+}
+
+/* ===== ADVENTURE ===== */
+.adventure-gallery {
+    display: flex;
+    gap: 16px;
+}
+
+.adventure-gallery figure {
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+}
+
+/* ===== FOOTER ===== */
 footer {
     display: flex;
     justify-content: space-between;
@@ -81,12 +170,26 @@ footer {
     padding: 16px;
     background-color: var(--primary-color);
     color: var(--accent2-color);
+    border-top: 8px solid var(--secondary-color);
 }
 
-.socialmedia img {
+.socialmedia {
+    display: flex;
+    gap: 8px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia a img {
     width: 60px;
     height: 60px;
 }
+
+/* ================================================= */
+/* ================= CONTACT PAGE ================= */
+/* ================================================= */
 
 .contact-page .company-info h1,
 .contact-page .company-info p {
@@ -94,27 +197,42 @@ footer {
     text-align: center;
 }
 
+.contact-page .company-info p {
+    margin-bottom: 8px;
+}
+
+/* Map + Form Layout */
 .contact-page .map-form-wrapper {
     display: flex;
-    gap: 40px;
     justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .contact-page iframe {
-    width: 100%;
+    width: 50%;
     max-width: 400px;
     height: 300px;
     border: none;
 }
 
+/* Contact Form */
 .contact-page .contact-form {
+    flex: 1;
+    min-width: 300px;
     max-width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Radio + Checkbox Alignment (Audit-safe) */
 .contact-page .contact-form label {
-    display: block;
-    margin-bottom: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
 }
 
 .contact-page .contact-form input,
@@ -124,33 +242,53 @@ footer {
     margin-bottom: 10px;
 }
 
+.contact-page .contact-form input[type="radio"],
+.contact-page .contact-form input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+/* Button – WCAG AA Contrast Fix */
 .contact-page .contact-form button {
+    width: 100%;
+    padding: 10px;
     background-color: var(--secondary-color);
     color: var(--accent1-color);
-    padding: 10px;
+    /* contrast compliant */
     border: none;
     cursor: pointer;
 }
 
-.contact-page .employees {
+.contact-page .contact-form button:hover {
+    opacity: 0.85;
+}
+
+/* Employees */
+.contact-page .employees-section .employees {
     display: flex;
     justify-content: center;
     gap: 60px;
     padding: 16px;
     background-color: var(--primary-color);
-    color: var(--accent2-color);
 }
 
-.contact-page .employees figure {
+.contact-page .employees-section figure {
     max-width: 150px;
     text-align: center;
 }
 
-.contact-page .employees img {
+.contact-page .employees-section img {
     width: 100%;
     border-radius: 8px;
 }
 
+.contact-page .employees-section figcaption {
+    color: var(--accent2-color);
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
 
     header,
@@ -159,7 +297,26 @@ footer {
         width: 95%;
     }
 
-    .contact-page .employees {
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 0 auto 12px;
+        width: 150px;
+    }
+
+    .hero article {
+        text-align: center;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery {
+        flex-direction: column;
+    }
+
+    .contact-page .employees-section .employees {
         flex-wrap: wrap;
         gap: 24px;
     }
