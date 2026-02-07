@@ -269,7 +269,10 @@ footer {
 }
 
 .contact-page .employees-section {
+    background-color: var(--primary-color);
+    /* dark background */
     color: var(--accent2-color);
+    /* white text */
 }
 
 @media (max-width: 900px) {
