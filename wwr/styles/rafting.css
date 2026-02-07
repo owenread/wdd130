@@ -207,6 +207,8 @@ footer {
     gap: 60px;
     padding: 16px;
     background-color: var(--primary-color);
+    /* FIX: WCAG AA contrast */
+    color: var(--accent2-color);
 }
 
 .contact-page .employees-section figure {
