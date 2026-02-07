@@ -235,7 +235,7 @@ footer {
     width: 100%;
     padding: 10px;
     background-color: var(--secondary-color);
-    color: var(--accent1-color);
+    color: white;
     /* contrast compliant */
     border: none;
     cursor: pointer;
@@ -264,7 +264,7 @@ footer {
 }
 
 .contact-page .employees-section figcaption {
-    color: var(--accent2-color);
+    color: white;
     font-size: 0.9rem;
 }
 
