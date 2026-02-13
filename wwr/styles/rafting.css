@@ -101,7 +101,8 @@ article {
 .hero h1 {
     position: absolute;
     top: 20px;
-    width: 100%;
+    left: 0;
+    right: 0;
     padding: 16px;
     text-align: center;
     background-color: rgba(38, 70, 83, 0.85);
@@ -120,7 +121,7 @@ article {
 
 .hero article img {
     width: 300px;
-    margin-left: 16px;
+    margin: 0 auto 12px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     display: block;
@@ -177,6 +178,8 @@ footer {
     width: 60px;
     height: 60px;
 }
+
+/* CONTACT PAGE */
 
 .contact-page .company-info h1,
 .contact-page .company-info p {
@@ -281,6 +284,134 @@ footer {
     font-size: 0.9rem;
 }
 
+/* ---------------- HOME PAGE ---------------- */
+
+.home-newsletter {
+    background-color: var(--secondary-color);
+    padding: 24px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.home-newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.home-newsletter input {
+    padding: 8px;
+    width: 100%;
+}
+
+.home-newsletter button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    border: none;
+    cursor: pointer;
+}
+
+.home-newsletter button:hover {
+    opacity: 0.85;
+}
+
+.home-cta {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.home-cta p {
+    padding-bottom: 10px;
+}
+
+.home-cta a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.home-cta a:hover {
+    /* I really liked how this padding makes the button pup with hover */
+    padding: 18px 30px;
+    background-color: var(--secondary-color);
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin: 32px 0;
+}
+
+.home-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ---------------- TRIPS PAGE ---------------- */
+
+.trips-cta {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.trips-cta a {
+    padding: 12px 24px;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.trip-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
+}
+
+.trip-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.trip-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.trips-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.trips-table th,
+.trips-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.trips-table th {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
 @media (max-width: 900px) {
 
     header,
@@ -304,6 +435,10 @@ footer {
 
     .adventure-gallery {
         flex-direction: column;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
     }
 
     .contact-page .employees-section .employees {
