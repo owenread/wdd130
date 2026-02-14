@@ -1,3 +1,5 @@
+/* Rafting Site CSS | Author: Owen Read */
+
 *,
 *::before,
 *::after {
@@ -181,8 +183,6 @@ footer {
     height: 60px;
 }
 
-/* CONTACT PAGE */
-
 .contact-page .company-info h1,
 .contact-page .company-info p {
     color: var(--primary-color);
@@ -286,8 +286,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ---------------- HOME PAGE ---------------- */
-
 .home-newsletter {
     background-color: var(--secondary-color);
     padding: 24px;
@@ -358,8 +356,6 @@ footer {
     border-radius: 8px;
 }
 
-/* ---------------- TRIPS PAGE ---------------- */
-
 .trips-cta {
     text-align: center;
     margin: 32px 0;
@@ -411,8 +407,6 @@ footer {
     background-color: var(--primary-color);
     color: var(--accent2-color);
 }
-
-/* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 900px) {
 
