@@ -109,7 +109,7 @@ article {
     font-size: 2rem;
 }
 
-.hero article {
+.hero div {
     position: absolute;
     bottom: 30px;
     left: 20px;
@@ -119,7 +119,7 @@ article {
     border-radius: 8px;
 }
 
-.hero article img {
+.hero div img {
     width: 300px;
     margin: 0 auto 12px;
     border-radius: 8px;
@@ -127,8 +127,9 @@ article {
     display: block;
 }
 
-.hero article p {
+.hero div p {
     color: var(--accent1-color);
+    text-align: center;
 }
 
 .history-content {
@@ -136,6 +137,7 @@ article {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
     align-items: center;
+    text-align: center;
 }
 
 .history-content img {
